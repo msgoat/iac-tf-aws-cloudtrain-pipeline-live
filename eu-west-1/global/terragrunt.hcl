@@ -27,4 +27,24 @@ inputs = {
     "Solution" = "CloudTrain Pipeline"
     "Stage" = "global"
   }
+  network_name = "cicd"
+  network_cidr = "10.31.0.0/16"
+  number_of_zones_to_span = 3
+  inbound_traffic_cidrs = [ "0.0.0.0/0" ]
+  nat_strategy = "NAT_NONE"
+  zones_to_span = 3
+  subnets = [
+    {
+      subnet_name = "app"
+      accessibility = "public"
+      newbits = 8
+      tags = {}
+    },
+    {
+      subnet_name = "data"
+      accessibility = "private"
+      newbits = 4
+      tags = {}
+    }
+  ]
 }
