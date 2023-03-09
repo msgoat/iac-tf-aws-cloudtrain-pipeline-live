@@ -20,5 +20,5 @@ terraform {
 inputs = {
   subnet_id = dependency.network.outputs.subnets[0].subnet_id
   ec2_key_pair_name = "key-eu-west-1-cloudtrain-pipeline-admin"
-  ec2_ami_id = "ami-01a19898704d7e626"
+  ec2_ami_id = "ami-03cee78bd65f1ea32"
 }
