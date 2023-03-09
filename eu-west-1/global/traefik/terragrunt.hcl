@@ -20,5 +20,20 @@ terraform {
 inputs = {
   subnet_id = dependency.network.outputs.subnets[0].subnet_id
   ec2_key_pair_name = "key-eu-west-1-cloudtrain-pipeline-admin"
-  ec2_ami_id = "ami-004d20457a78a12ee"
+  ec2_ami_id = "ami-0d7f7c30a728f71f0"
+  domain_name = "cloudtrain.aws.msgoat.eu"
+  backends = [
+    {
+      name = "nexus"
+      ec2_instance_name = "ec2-eu-west-1-ctrainpipe-all-nexus"
+      protocol = "http"
+      port = 8081
+    },
+    {
+      name = "docker"
+      ec2_instance_name = "ec2-eu-west-1-ctrainpipe-all-harbor"
+      protocol = "http"
+      port = 80
+    }
+  ]
 }
