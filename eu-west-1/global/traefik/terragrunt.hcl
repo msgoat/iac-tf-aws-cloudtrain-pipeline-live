@@ -34,6 +34,12 @@ inputs = {
       ec2_instance_name = "ec2-eu-west-1-ctrainpipe-all-harbor"
       protocol = "http"
       port = 80
+    },
+    {
+      name = "sonarqube"
+      ec2_instance_name = "ec2-eu-west-1-ctrainpipe-all-sonarqube"
+      protocol = "http"
+      port = 9000
     }
   ]
 }

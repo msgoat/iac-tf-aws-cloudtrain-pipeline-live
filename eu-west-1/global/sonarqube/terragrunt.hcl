@@ -19,7 +19,7 @@ terraform {
 
 inputs = {
   ec2_instance_type = "t4g.small"
-  ec2_ami_id = "ami-0a2d0bd92644cacb3"
+  ec2_ami_id = "ami-0d747d1cb3cc3e3ef"
   ec2_ami_architecture = "arm64"
   ec2_subnet_id = element([ for sn in dependency.network.outputs.subnets : sn.subnet_id if sn.subnet_template_name == "app" ], 0)
   ec2_key_pair_name = "key-eu-west-1-cloudtrain-pipeline-admin"
