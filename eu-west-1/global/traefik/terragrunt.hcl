@@ -40,6 +40,12 @@ inputs = {
       ec2_instance_name = "ec2-eu-west-1-ctrainpipe-all-sonarqube"
       protocol = "http"
       port = 9000
+    },
+    {
+      name = "oidc"
+      ec2_instance_name = "ec2-eu-west-1-ctrainpipe-all-keycloak"
+      protocol = "http"
+      port = 8080
     }
   ]
 }

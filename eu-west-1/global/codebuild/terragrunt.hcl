@@ -250,6 +250,7 @@ inputs = {
     }
   ]
   project_environment_variables : {
+    CLOUDTRAIN_EKS_DEPLOY_ENABLED : "false"
     CLOUDTRAIN_EKS_CLUSTER_NAME : "eks-eu-west-1-cloudtrain-dev-cloudtrain"
     CLOUDTRAIN_EKS_ROLE_ARN : "arn:aws:iam::928593304691:role/role-eu-west-1-cloudtrain-eks"
   }
