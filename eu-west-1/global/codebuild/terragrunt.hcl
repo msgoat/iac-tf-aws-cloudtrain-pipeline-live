@@ -247,11 +247,18 @@ inputs = {
       name : "cnj-tracing-resources"
       description : "pull from GitHub"
       git_repo_url : "https://github.com/msgoat/cnj-tracing-resources.git"
+    },
+    {
+      name : "iac-tf-aws-cloudtrain-modules"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/iac-tf-aws-cloudtrain-modules.git"
     }
   ]
   project_environment_variables : {
-    CLOUDTRAIN_EKS_DEPLOY_ENABLED : "false"
-    CLOUDTRAIN_EKS_CLUSTER_NAME : "eks-eu-west-1-cloudtrain-dev-cloudtrain"
-    CLOUDTRAIN_EKS_ROLE_ARN : "arn:aws:iam::928593304691:role/role-eu-west-1-cloudtrain-eks"
+    CLOUDTRAIN_EKS_DEPLOY_ENABLED : "true"
+    CLOUDTRAIN_EKS_CLUSTER_NAME : "eks-eu-west-1-ctrainpltf-dev-train2023"
+    CLOUDTRAIN_EKS_ROLE_ARN : "arn:aws:iam::928593304691:role/role-eks-eu-west-1-ctrainpltf-dev-train2023-admin"
+    CLOUDTRAIN_EKS_INGRESS_HOST : "train2023-dev.k8s.cloudtrain.aws.msgoat.eu"
+    CLOUDTRAIN_EKS_NAMESPACE : "cloudtrain"
   }
 }
