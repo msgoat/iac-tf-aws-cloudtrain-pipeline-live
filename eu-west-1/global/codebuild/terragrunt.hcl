@@ -253,6 +253,11 @@ inputs = {
       name : "iac-tf-aws-cloudtrain-modules"
       description : "pull from GitHub"
       git_repo_url : "https://github.com/msgoat/iac-tf-aws-cloudtrain-modules.git"
+    },
+    {
+      name : "cnj-docker-jre17-alpine"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/cnj-docker-jre17-alpine.git"
     }
   ]
   project_environment_variables : {
