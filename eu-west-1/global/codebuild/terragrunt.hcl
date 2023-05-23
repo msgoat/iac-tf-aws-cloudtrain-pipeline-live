@@ -258,6 +258,11 @@ inputs = {
       name : "cnj-docker-jre17-alpine"
       description : "pull from GitHub"
       git_repo_url : "https://github.com/msgoat/cnj-docker-jre17-alpine.git"
+    },
+    {
+      name : "cnj-docker-jre17"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/cnj-docker-jre17.git"
     }
   ]
   project_environment_variables : {
