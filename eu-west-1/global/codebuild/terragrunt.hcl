@@ -271,6 +271,6 @@ inputs = {
     CLOUDTRAIN_EKS_ROLE_ARN : "arn:aws:iam::928593304691:role/role-eks-eu-west-1-ctrainpltf-dev-train2023-admin"
     CLOUDTRAIN_EKS_INGRESS_HOST : "train2023-dev.k8s.cloudtrain.aws.msgoat.eu"
     CLOUDTRAIN_EKS_NAMESPACE : "cloudtrain"
-    CLOUDTRAIN_EKS_CLUSTER_ROUTE : "https://$CLOUDTRAIN_EKS_INGRESS_HOST"
+    CLOUDTRAIN_EKS_CLUSTER_ROUTE : "https://train2023-dev.k8s.cloudtrain.aws.msgoat.eu"
   }
 }
