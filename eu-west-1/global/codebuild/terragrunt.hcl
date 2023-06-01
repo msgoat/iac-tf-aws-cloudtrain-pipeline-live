@@ -90,9 +90,19 @@ inputs = {
       git_repo_url : "https://github.com/msgoat/cnj-common-test-javax.git"
     },
     {
-      name : "cnj-config"
+      name : "cnj-config-backend-micro"
       description : "pull from GitHub"
-      git_repo_url : "https://github.com/msgoat/cnj-config.git"
+      git_repo_url : "https://github.com/msgoat/cnj-config-backend-micro.git"
+    },
+    {
+      name : "cnj-config-backend-quarkus"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/cnj-config-backend-quarkus.git"
+    },
+    {
+      name : "cnj-config-backend-spring"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/cnj-config-backend-spring.git"
     },
     {
       name : "cnj-docker-tools"
