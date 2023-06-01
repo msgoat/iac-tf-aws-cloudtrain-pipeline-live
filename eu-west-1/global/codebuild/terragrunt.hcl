@@ -263,6 +263,11 @@ inputs = {
       name : "cnj-docker-jre17"
       description : "pull from GitHub"
       git_repo_url : "https://github.com/msgoat/cnj-docker-jre17.git"
+    },
+    {
+      name : "cnj-docker-payara-full"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/cnj-docker-payara-full.git"
     }
   ]
   project_environment_variables : {}
