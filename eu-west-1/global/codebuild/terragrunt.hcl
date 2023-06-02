@@ -225,9 +225,24 @@ inputs = {
       git_repo_url : "https://github.com/msgoat/cnj-resilience-downstream-b.git"
     },
     {
-      name : "cnj-rest"
+      name : "cnj-rest-downstream-spring"
       description : "pull from GitHub"
-      git_repo_url : "https://github.com/msgoat/cnj-rest.git"
+      git_repo_url : "https://github.com/msgoat/cnj-rest-downstream-spring.git"
+    },
+    {
+      name : "cnj-rest-backend-micro"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/cnj-rest-backend-micro.git"
+    },
+    {
+      name : "cnj-rest-backend-quarkus"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/cnj-rest-backend-quarkus.git"
+    },
+    {
+      name : "cnj-rest-backend-spring"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/cnj-rest-backend-spring.git"
     },
     {
       name : "cnj-security-oidc-backend-micro"
