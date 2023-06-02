@@ -230,9 +230,19 @@ inputs = {
       git_repo_url : "https://github.com/msgoat/cnj-rest.git"
     },
     {
-      name : "cnj-security-oidc"
+      name : "cnj-security-oidc-backend-micro"
       description : "pull from GitHub"
-      git_repo_url : "https://github.com/msgoat/cnj-security-oidc.git"
+      git_repo_url : "https://github.com/msgoat/cnj-security-oidc-backend-micro.git"
+    },
+    {
+      name : "cnj-security-oidc-backend-quarkus"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/cnj-security-oidc-backend-quarkus.git"
+    },
+    {
+      name : "cnj-security-oidc-backend-spring"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/cnj-security-oidc-backend-spring.git"
     },
     {
       name : "cnj-tracing-backend-micro"
