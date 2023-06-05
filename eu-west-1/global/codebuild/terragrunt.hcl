@@ -165,9 +165,24 @@ inputs = {
       git_repo_url : "https://github.com/msgoat/cnj-monitoring-resources.git"
     },
     {
-      name : "cnj-openapi"
+      name : "cnj-openapi-backend-micro"
       description : "pull from GitHub"
-      git_repo_url : "https://github.com/msgoat/cnj-openapi.git"
+      git_repo_url : "https://github.com/msgoat/cnj-openapi-backend-micro.git"
+    },
+    {
+      name : "cnj-openapi-backend-quarkus"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/cnj-openapi-backend-quarkus.git"
+    },
+    {
+      name : "cnj-openapi-backend-spring"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/cnj-openapi-backend-spring.git"
+    },
+    {
+      name : "cnj-openapi-downstream-spring"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/cnj-openapi-downstream-spring.git"
     },
     {
       name : "cnj-payara-opentracing-jaeger"
