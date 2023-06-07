@@ -185,22 +185,17 @@ inputs = {
       git_repo_url : "https://github.com/msgoat/cnj-openapi-downstream-spring.git"
     },
     {
-      name : "cnj-payara-opentracing-jaeger"
-      description : "pull from GitHub"
-      git_repo_url : "https://github.com/msgoat/cnj-payara-opentracing-jaeger.git"
-    },
-    {
-      name : "cnj-persistence-sql-bknd-micro"
+      name : "cnj-persistence-sql-backend-micro"
       description : "pull from GitHub"
       git_repo_url : "https://github.com/msgoat/cnj-persistence-sql-backend-micro.git"
     },
     {
-      name : "cnj-persistence-sql-bknd-quarkus"
+      name : "cnj-persistence-sql-backend-quarkus"
       description : "pull from GitHub"
       git_repo_url : "https://github.com/msgoat/cnj-persistence-sql-backend-quarkus.git"
     },
     {
-      name : "cnj-persistence-sql-bknd-spring"
+      name : "cnj-persistence-sql-backend-spring"
       description : "pull from GitHub"
       git_repo_url : "https://github.com/msgoat/cnj-persistence-sql-backend-spring.git"
     },
