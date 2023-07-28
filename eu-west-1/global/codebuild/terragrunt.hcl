@@ -313,6 +313,11 @@ inputs = {
       name : "cnj-docker-payara-full"
       description : "pull from GitHub"
       git_repo_url : "https://github.com/msgoat/cnj-docker-payara-full.git"
+    },
+    {
+      name : "iac-tf-az-cloudtrain-modules"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/iac-tf-az-cloudtrain-modules.git"
     }
   ]
   project_environment_variables : {}
