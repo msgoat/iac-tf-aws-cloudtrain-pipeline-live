@@ -335,7 +335,7 @@ inputs = {
     {
       name = "CLOUDTRAIN_CODEBUILD_EKS_DEPLOY_ENABLED"
       description = "Controls if application should be deployed to EKS"
-      value = "true"
+      value = "false"
     },
     {
       name = "CLOUDTRAIN_CODEBUILD_EKS_INGRESS_HOST"
@@ -346,6 +346,16 @@ inputs = {
       name = "CLOUDTRAIN_CODEBUILD_EKS_NAMESPACE"
       description = "Kubernetes namespace the CloudTrain applications should be deployed to"
       value = "cloudtrain"
+    },
+    {
+      name = "CLOUDTRAIN_CODEBUILD_GIT_TAG_USER"
+      description = "Name of git user used to push git tags to GitHub"
+      value = "cloudtrain-codebuild"
+    },
+    {
+      name = "CLOUDTRAIN_CODEBUILD_GIT_TAG_EMAIL"
+      description = "Email address of git user used to push git tags to GitHub"
+      value = "cloudtrain.codebuild@msg.group"
     }
   ]
 }
