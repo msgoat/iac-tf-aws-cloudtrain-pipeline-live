@@ -318,6 +318,11 @@ inputs = {
       name : "iac-tf-az-cloudtrain-modules"
       description : "pull from GitHub"
       git_repo_url : "https://github.com/msgoat/iac-tf-az-cloudtrain-modules.git"
+    },
+    {
+      name : "codebuild-cbe-k8s"
+      description : "pull from GitHub"
+      git_repo_url : "https://github.com/msgoat/codebuild-cbe-k8s.git"
     }
   ]
   project_environment_variables : {}
