@@ -3,8 +3,8 @@ include {
 }
 
 terraform {
-  source = "git::https://github.com/msgoat/iac-tf-aws-cloudtrain-pipeline-modules.git//modules/codebuild/project"
-#  source = "../../../../iac-tf-aws-cloudtrain-pipeline-modules//modules/codebuild/project"
+#  source = "git::https://github.com/msgoat/iac-tf-aws-cloudtrain-pipeline-modules.git//modules/codebuild/project"
+  source = "../../../../iac-tf-aws-cloudtrain-pipeline-modules//modules/codebuild/project"
 }
 
 inputs = {
@@ -323,6 +323,7 @@ inputs = {
       name : "codebuild-cbe-k8s"
       description : "pull from GitHub"
       git_repo_url : "https://github.com/msgoat/codebuild-cbe-k8s.git"
+      add_webhook: false
     }
   ]
   project_environment_variables : {}
