@@ -3,8 +3,8 @@ include {
 }
 
 terraform {
-#  source = "git::https://github.com/msgoat/iac-tf-aws-cloudtrain-pipeline-modules.git//modules/codebuild/custom-build-environment-repository"
-  source = "../../../../iac-tf-aws-cloudtrain-pipeline-modules//modules/codebuild/custom-build-environment-repository"
+  source = "git::https://github.com/msgoat/iac-tf-aws-cloudtrain-pipeline-modules.git//modules/codebuild/custom-build-environment-repository"
+#  source = "../../../../iac-tf-aws-cloudtrain-pipeline-modules//modules/codebuild/custom-build-environment-repository"
 }
 
 inputs = {
