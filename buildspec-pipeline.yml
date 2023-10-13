@@ -1,0 +1,50 @@
+# buildspec-pipeline.yml
+# Upgrades all self-managed CloudTrain pipeline components
+#
+version: 0.2
+
+env:
+  variables:
+    TARGET_REGION: "eu-west-1"
+    TARGET_STAGE: "global"
+
+phases:
+  install:
+    on-failure: ABORT
+    commands:
+      - echo "Running phase install"
+      - echo "Download and run common installation script"
+      - aws s3 cp s3://s3-eu-west-1-cloudtrain-codebuild-shared/cloudtrain-codebuild-install-terraform.sh ~/
+      - chmod u+x ~/cloudtrain-codebuild-install-terraform.sh
+      - ~/cloudtrain-codebuild-install-terraform.sh
+  pre_build:
+    on-failure: ABORT
+    commands:
+      - echo "Running phase pre_build"
+  build:
+    on-failure: ABORT
+    commands:
+      - echo "Running phase build"
+      - echo "Upgrade Harbor Docker Registry"
+      - cd $CODEBUILD_SRC_DIR/$TARGET_REGION/$TARGET_STAGE/harbor
+      - terragrunt plan -out tf.plan
+      - terragrunt apply tf.plan
+      - echo "Upgrade KeyCloak Identity Provider"
+      - cd $CODEBUILD_SRC_DIR/$TARGET_REGION/$TARGET_STAGE/keycloak
+      - terragrunt plan -out tf.plan
+      - terragrunt apply tf.plan
+      - echo "Upgrade Nexus Maven Repository"
+      - cd $CODEBUILD_SRC_DIR/$TARGET_REGION/$TARGET_STAGE/nexus
+      - terragrunt plan -out tf.plan
+      - terragrunt apply tf.plan
+      - echo "Upgrade SonarQube"
+      - cd $CODEBUILD_SRC_DIR/$TARGET_REGION/$TARGET_STAGE/sonarqube
+      - terragrunt plan -out tf.plan
+      - terragrunt apply tf.plan
+      - echo "Upgrade Traefik"
+      - cd $CODEBUILD_SRC_DIR/$TARGET_REGION/$TARGET_STAGE/traefik
+      - terragrunt plan -out tf.plan
+      - terragrunt apply tf.plan
+  post_build:
+    commands:
+      - echo "Running phase post_build"

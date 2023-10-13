@@ -14,7 +14,8 @@ dependency network {
 }
 
 terraform {
-  source = "../../../../iac-tf-aws-cloudtrain-pipeline-modules//modules/harbor/standalone"
+  source = "git::https://github.com/msgoat/iac-tf-aws-cloudtrain-pipeline-modules.git//modules/harbor/standalone"
+#  source = "../../../../iac-tf-aws-cloudtrain-pipeline-modules//modules/harbor/standalone"
 }
 
 inputs = {

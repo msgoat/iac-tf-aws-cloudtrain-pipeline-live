@@ -14,7 +14,8 @@ dependency network {
 }
 
 terraform {
-  source = "../../../../iac-tf-aws-cloudtrain-pipeline-modules//modules/keycloak/standalone"
+  source = "git::https://github.com/msgoat/iac-tf-aws-cloudtrain-pipeline-modules.git//modules/keycloak/standalone"
+#  source = "../../../../iac-tf-aws-cloudtrain-pipeline-modules//modules/keycloak/standalone"
 }
 
 inputs = {

@@ -14,7 +14,8 @@ dependency network {
 }
 
 terraform {
-  source = "../../../../iac-tf-aws-cloudtrain-pipeline-modules//modules/traefik/standalone"
+  source = "git::https://github.com/msgoat/iac-tf-aws-cloudtrain-pipeline-modules.git//modules/traefik/standalone"
+#  source = "../../../../iac-tf-aws-cloudtrain-pipeline-modules//modules/traefik/standalone"
 }
 
 inputs = {
