@@ -323,11 +323,14 @@ inputs = {
       name : "cnj-docker-jre21"
       description : "pull from GitHub"
       git_repo_url : "https://github.com/msgoat/cnj-docker-jre21.git"
+      add_webhook: false
+
     },
     {
       name : "cnj-docker-jre21-alpine"
       description : "pull from GitHub"
       git_repo_url : "https://github.com/msgoat/cnj-docker-jre21-alpine.git"
+      add_webhook: false
     }
   ]
   project_environment_variables : {}
