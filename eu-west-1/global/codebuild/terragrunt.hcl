@@ -320,16 +320,14 @@ inputs = {
       git_repo_url : "https://github.com/msgoat/iac-tf-az-cloudtrain-modules.git"
     },
     {
-      name : "codebuild-cbe-k8s"
+      name : "cnj-docker-jre21"
       description : "pull from GitHub"
-      git_repo_url : "https://github.com/msgoat/codebuild-cbe-k8s.git"
-      add_webhook: false
+      git_repo_url : "https://github.com/msgoat/cnj-docker-jre21.git"
     },
     {
-      name : "codebuild-cbe-iac"
+      name : "cnj-docker-jre21-alpine"
       description : "pull from GitHub"
-      git_repo_url : "https://github.com/msgoat/codebuild-cbe-iac.git"
-      add_webhook: false
+      git_repo_url : "https://github.com/msgoat/cnj-docker-jre21-alpine.git"
     }
   ]
   project_environment_variables : {}
