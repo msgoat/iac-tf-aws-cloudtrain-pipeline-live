@@ -24,6 +24,5 @@ inputs = {
   ec2_ami_architecture = "arm64"
   ec2_subnet_id = element([ for sn in dependency.network.outputs.subnets : sn.subnet_id if sn.subnet_template_name == "app" ], 0)
   ec2_key_pair_name = "key-eu-west-1-cloudtrain-pipeline-admin"
-  postgres_version = "14.6"
   db_subnet_ids = [ for sn in dependency.network.outputs.subnets : sn.subnet_id if sn.subnet_template_name == "data" ]
 }
