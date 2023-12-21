@@ -30,26 +30,42 @@ phases:
       - cd $CODEBUILD_SRC_DIR/$TARGET_REGION/$TARGET_STAGE/harbor
       - terragrunt plan -out tf.plan
       - |-
-        if [ "$DRY_RUN" == "false" ]
+        if [ "$DRY_RUN" != "true" ]
         then
           terragrunt apply tf.plan
         fi
       - echo "Upgrade KeyCloak Identity Provider"
       - cd $CODEBUILD_SRC_DIR/$TARGET_REGION/$TARGET_STAGE/keycloak
       - terragrunt plan -out tf.plan
-      # - terragrunt apply tf.plan
+      - |-
+        if [ "$DRY_RUN" != "true" ]
+        then
+          terragrunt apply tf.plan
+        fi
       - echo "Upgrade Nexus Maven Repository"
       - cd $CODEBUILD_SRC_DIR/$TARGET_REGION/$TARGET_STAGE/nexus
       - terragrunt plan -out tf.plan
-      # - terragrunt apply tf.plan
+      - |-
+        if [ "$DRY_RUN" != "true" ]
+        then
+          terragrunt apply tf.plan
+        fi
       - echo "Upgrade SonarQube"
       - cd $CODEBUILD_SRC_DIR/$TARGET_REGION/$TARGET_STAGE/sonarqube
       - terragrunt plan -out tf.plan
-      # - terragrunt apply tf.plan
+      - |-
+        if [ "$DRY_RUN" != "true" ]
+        then
+          terragrunt apply tf.plan
+        fi
       - echo "Upgrade Traefik"
       - cd $CODEBUILD_SRC_DIR/$TARGET_REGION/$TARGET_STAGE/traefik
       - terragrunt plan -out tf.plan
-      # - terragrunt apply tf.plan
+      - |-
+        if [ "$DRY_RUN" != "true" ]
+        then
+          terragrunt apply tf.plan
+        fi
   post_build:
     commands:
       - echo "Running phase post_build"
