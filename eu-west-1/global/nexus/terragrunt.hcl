@@ -15,11 +15,10 @@ dependency network {
 
 terraform {
   source = "git::https://github.com/msgoat/iac-tf-aws-cloudtrain-pipeline-modules.git//modules/nexus/standalone"
-  #  source = "../../../../iac-tf-aws-cloudtrain-pipeline-modules//modules/nexus/standalone"
+  # source = "../../../../iac-tf-aws-cloudtrain-pipeline-modules//modules/nexus/standalone"
 }
 
 inputs = {
   subnet_id = dependency.network.outputs.subnets[0].subnet_id
   ec2_key_pair_name = "key-eu-west-1-cloudtrain-pipeline-admin"
-#  ec2_ami_id = "ami-0d52b86146d6f336d"
 }
