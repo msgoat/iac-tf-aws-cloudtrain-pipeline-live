@@ -14,8 +14,8 @@ dependency network {
 }
 
 terraform {
-  # source = "git::https://github.com/msgoat/iac-tf-aws-cloudtrain-pipeline-modules.git//modules/sonarqube/standalone"
-  source = "../../../../iac-tf-aws-cloudtrain-pipeline-modules//modules/sonarqube/standalone"
+  source = "git::https://github.com/msgoat/iac-tf-aws-cloudtrain-pipeline-modules.git//modules/sonarqube/standalone"
+  # source = "../../../../iac-tf-aws-cloudtrain-pipeline-modules//modules/sonarqube/standalone"
 }
 
 inputs = {
