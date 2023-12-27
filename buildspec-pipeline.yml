@@ -66,6 +66,14 @@ phases:
         then
           terragrunt apply tf.plan
         fi
+      - echo "Upgrade OpsBox"
+      - cd $CODEBUILD_SRC_DIR/$TARGET_REGION/$TARGET_STAGE/opsbox
+      - terragrunt plan -out tf.plan
+      - |-
+        if [ "$DRY_RUN" != "true" ]
+        then
+          terragrunt apply tf.plan
+        fi
   post_build:
     commands:
       - echo "Running phase post_build"
